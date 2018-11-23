@@ -1,0 +1,60 @@
+<div class="container clearfix">
+
+    <hr>
+    <form [formGroup]="form" class="form" role="form" method="post" action="login" accept-charset="UTG-8" id="log-nav">
+        <div class="form-group">
+            <label for="exampleInputName">Imię</label>
+            <input type="text" class="form-control" id="exampleInputName" placeholder="Wprowadź imię">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputLastName">Nazwisko</label>
+            <input type="text" class="form-control" id="exampleInputLastName" placeholder="Wprowadź nazwisko">
+        </div>
+
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+            <input [(ngModel)]="credentials.login" formControlName="login" name="login" type="email"
+                   class="form-control" id="exampleInputEmail2" placeholder="Adres email">
+            <div *ngif="login.touched && login.invalid" class="aler alert-danger" required>Login jest wymagany!!
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputPassowrd2">Password</label>
+            <input [(ngModel)]="credentials.password" formControlName="password" name="password" type="password"
+                   class="form-control" id="exampleInputPassowrd2" placeholder="Hasło">
+            <div *ngif="password.touched && password.invalid" class="alert alert-danger" required>Hasło jest Wymagane!
+            </div>
+        </div>
+        <div *ngif="!this.logged" class="alert alert-danger"> Login lub hasło jest nieprawidłowe!</div>
+        <div class="form-group">
+            <button (click)="signIn()" type="submit" class="btn btn-primary btn-block">Zaloguj się</button>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Kobieta</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
+            <label class="form-check-label" for="inlineCheckbox2">Mężczyzna</label>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Opis</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example-number-input" class="col-form-label">Wiek</label>
+            <input class="form-control" type="number" value="18" id="example-number-input">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Stan cywilny</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Panna/kawaler</option>
+                <option>Panna</option>
+                <option>Kawaler</option>
+            </select>
+        </div>
+        <button type="reset" class="btn btn-primary">Wyczyść</button>
+        <button type="submit" class="btn btn-primary">Zaakceptuj</button>
+    </form>
+</div>
+
