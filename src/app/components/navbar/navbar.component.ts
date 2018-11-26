@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl,  FormGroup, Validators} from '@angular/forms';
+
 import {Router} from "@angular/router";
 
 @Component({
@@ -9,19 +9,12 @@ import {Router} from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
 
-    credentials = {
-        login: "",
-        password:"",
-    };
-    logged = true;
-    logout = false;
-
-    form = new FormGroup({
-        login: new FormControl("", Validators.required),
-        possword: new FormControl("", Validators.required)})
 
 
-    constructor(private router: Router,){}
+
+    constructor(){
+
+    }
     ngOnInit(){
 
     }

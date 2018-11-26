@@ -1,9 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
-import {OnInit} from "@angular/core";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
+
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;

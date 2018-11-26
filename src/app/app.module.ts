@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, OnInit, OnInit} from '@angular/core';
+import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {ContactComponent} from './components/contact/contact.component';
@@ -15,8 +15,11 @@ import {BlogDetailsComponent} from './components/blog/blog-details/blog-details.
 import {SummaryPipe} from './summary.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import {FilterPipe} from './pipes/filter.pipe';
-import {FormsModule, Validators} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { BlogHomeComponent } from './components/blog-home/blog-home.component';
+import { TextFormatDirective } from './Directives/text-format.directive';
 
 const appRoutes: Routes = [
     {
@@ -29,7 +32,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'blog',
-        component: BlogComponent,
+        component: BlogHomeComponent,
     },
     {
         path: 'contact',
@@ -55,6 +58,9 @@ const appRoutes: Routes = [
         BlogDetailsComponent,
         SummaryPipe,
         FilterPipe,
+        SearchBarComponent,
+        BlogHomeComponent,
+        TextFormatDirective,
     ],
     imports: [
         BrowserModule,
