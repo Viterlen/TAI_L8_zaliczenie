@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b21212dc-f112-4fa3-a0b1-16d876d64a36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/blog/blog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/blog/blog.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/blog/blog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/blog/blog.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/contact/contact.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/contact/contact.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/contact/contact.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/contact/contact.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/contact/contact.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/contact/contact.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="b21212dc-f112-4fa3-a0b1-16d876d64a36" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,14 +98,14 @@
           <entry key="babelrc" value="60" />
           <entry key="html" value="178" />
           <entry key="js" value="64" />
-          <entry key="json" value="59" />
+          <entry key="json" value="96" />
           <entry key="ts" value="780" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="178" />
-          <entry key="JSON" value="59" />
+          <entry key="JSON" value="96" />
           <entry key="JavaScript" value="64" />
           <entry key="PLAIN_TEXT" value="60" />
           <entry key="TypeScript" value="780" />
@@ -182,8 +171,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="340">
+              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -316,7 +305,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/student/Desktop/TAI5/TAI5/src/app/api/package.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543257827167" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543258204322" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -387,12 +376,12 @@
       <updated>1542962724215</updated>
       <workItem from="1542962726772" duration="1975000" />
       <workItem from="1542964756355" duration="4896000" />
-      <workItem from="1543247784278" duration="9867000" />
+      <workItem from="1543247784278" duration="10255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16738000" />
+    <option name="totallyTimeSpent" value="17126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="773" y="0" width="1154" height="1167" extended-state="0" />
@@ -745,8 +734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        <state relative-caret-position="340">
+          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
