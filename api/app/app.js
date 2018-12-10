@@ -1,60 +1,40 @@
+'use strict';
+
 import express from 'express';
 import cors from 'cors';
+import morgan from 'morgan';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import config from './config';
+import routes from './REST/routes';
+
+
 const app = express();
+app.use(express.static(__dirname + '/'));
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json({limit: '2048kb'}));
 
-app.use(express.static('public'));
-
-
-
-const posts = [
-    {id: 1, title: "tytuł", text: "Lorem ipsum"},
-    {id: 2, title: "tytuł2", text: "Lorem ipsum2"},
-    {id: 3, title: "tytuł3", text: "Lorem ipsum3"}
-];
-
-app.get('/api/posts', (req, res) => {
-    res.send(posts);
-});
-
-app.get('/api/posts/:id', (req, res) => {
-    const post = posts.find((p) => p.id === parseInt(req.params.id));
-    if (!post) {
-        res.status(404).send("Post NotFound");
-    }
-    res.send(post);
-});
-
-app.post('/api/posts', (req, res) => {
-    const post = {
-        id: posts.length + 1,
-        title: req.body.name,
-        text: req.body.text
-    };
-    posts.push(post);
-    res.send(post);
-});
-
-app.put('/api/posts/:id', (req, res) => {
-    const post = posts.find((p) => p.id === parseInt(req.params.id));
-    if (!post) {
-        res.status(404).send("Post NotFound");
-    }
-    post.title = req.body.title;
-    post.text = req.body.text;
-    res.send(post);
-});
-
-app.delete('/api/posts/:id', (req, res) => {
-    const post = posts.find((p) => p.id === parseInt(req.params.id));
-    if (!post) {
-        res.status(404).send("Post NotFound");
-    }
-    const index = posts.indexOf(posts);
-    posts.splice(index, 1, null);
-    res.send(post);
-});
-
-app.listen(process.env.PORT || 3000, function () {
-    console.info('Server is running')
-});
 app.use(cors());
+
+app.use(express.static('frontend/app'));
+
+mongoose.connect(config.databaseUrl, {useNewUrlParser: true, useCreateIndex: true}, (error) => {
+    if (error) {
+        console.error(error);
+    }
+    else {
+        console.log('Connect with database established');
+    }
+});
+process.on('SIGINT', () => {
+    mongoose.connection.close(function () {
+        console.error('Mongoose default connection disconnected through app termination');
+        process.exit(0);
+    });
+});
+
+routes(app);
+app.listen(config.port, () => {
+    console.info(`Server is running at ${config.port}`)
+});
