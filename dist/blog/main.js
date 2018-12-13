@@ -479,7 +479,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<search-bar (name)=\"getName($event)\"></search-bar>\n<app-blog [filterText]=\"filterText\"></app-blog>"
+module.exports = "<search-bar (name)=\"getName($event)\"></search-bar>\r\n<app-blog [filterText]=\"filterText\"></app-blog>"
 
 /***/ }),
 
@@ -983,7 +983,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<input [(ngModel)]=\"filterText\" (ngModelChange)=\"sendFilter($event)\"\n       placeholder=\"Wpisz nazwę...\" id=\"search\" type=\"search\" class=\"form-control\" appTextFormat>\n"
+module.exports = "<input [(ngModel)]=\"filterText\" (ngModelChange)=\"sendFilter($event)\"\r\n       placeholder=\"Wpisz nazwę...\" id=\"search\" type=\"search\" class=\"form-control\" appTextFormat>\r\n"
 
 /***/ }),
 
@@ -1227,7 +1227,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\student\Desktop\TAI5\TAI5\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Viterlen.DESKTOP-CN2MLP6\Desktop\JS2\TAI_L8_zaliczenie\src\main.ts */"./src/main.ts");
 
 
 /***/ })

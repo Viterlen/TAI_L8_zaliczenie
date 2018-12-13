@@ -1,4 +1,6 @@
-const postSchema = new mongoose.Schema({
+import mongose from 'mongoose';
+import uniqueValidator from 'mongoose-unique-validator';
+const postSchema = new mongose.Schema({
     title: {type: String},
     url: {type: Number},
     content: {type: String},
@@ -7,4 +9,4 @@ const postSchema = new mongoose.Schema({
 });
 postSchema.plugin(uniqueValidator);
 
-const PostModel = mongoose.model('product', postSchema );
+const PostModel = mongose.model('product', postSchema );

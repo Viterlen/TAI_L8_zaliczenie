@@ -20,29 +20,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { TextFormatDirective } from './Directives/text-format.directive';
+import {DataServiceService} from "./services/data-service.service";
 
-const appRoutes: Routes = [
-    {
-        path: '',
-        component: HomeComponent,
-    },
-    {
-        path: 'quiz',
-        component: QuizComponent,
-    },
-    {
-        path: 'blog',
-        component: BlogHomeComponent,
-    },
-    {
-        path: 'contact',
-        component: ContactComponent,
-    },
-    {
-        path: 'blog/details/:id',
-        component: BlogDetailsComponent,
-    }
-]
 
 @NgModule({
     declarations: [
@@ -64,12 +43,11 @@ const appRoutes: Routes = [
     ],
     imports: [
         BrowserModule,
-        RouterModule.forRoot(appRoutes),
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
     ],
-    providers: [],
+    providers: [DataServiceService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

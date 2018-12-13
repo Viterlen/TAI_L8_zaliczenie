@@ -23,7 +23,7 @@ const postEndpoint = (router) => {
         }
     });
 
-    router.post('/api/posts/:id', async (request, response, next) => {
+    router.post('/api/posts/', async (request, response, next) => {
         try {
             let result = await
                 business(request).getPostManager().createNewOrUpdate(request.body);

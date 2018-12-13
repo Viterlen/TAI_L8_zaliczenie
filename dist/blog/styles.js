@@ -596,8 +596,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\student\Desktop\TAI5\TAI5\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! C:\Users\student\Desktop\TAI5\TAI5\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\Users\Viterlen.DESKTOP-CN2MLP6\Desktop\JS2\TAI_L8_zaliczenie\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\Viterlen.DESKTOP-CN2MLP6\Desktop\JS2\TAI_L8_zaliczenie\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
 
 
 /***/ })

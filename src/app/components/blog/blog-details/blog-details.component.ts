@@ -10,16 +10,13 @@ import {DataServiceService} from '../../../services/data-service.service';
 })
 export class BlogDetailsComponent implements OnInit {
 
-  id;
-  post;
+    post: any;
+    constructor(private route: ActivatedRoute, private DataServiceService : DataServiceService ) { }
 
-  constructor(private Activatedroute: ActivatedRoute, private dataService:DataServiceService) { }
-
-  ngOnInit() {
-    this.id = this.Activatedroute.snapshot.params['id'];
-    // this.post = new BlogComponent().items.find(p => p.id == this.id);
-    this.dataService.get(this.id).subscribe(result => {
-      this.post = result;
-    });
+    ngOnInit() {
+        this.DataServiceService .getPost(this.route.params['id']).subscribe( (data) => {
+            this.post = data;
+        });
     }
+
   }
