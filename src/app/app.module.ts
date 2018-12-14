@@ -21,6 +21,7 @@ import { TextFormatDirective } from './Directives/text-format.directive';
 import {DataServiceService} from "./services/data-service.service";
 import {BlogDetailsComponent} from "./components/blog/blog-details/blog-details.component";
 import {AppRoutingModule} from "./app.routing.module";
+import {AuthService} from "../../api/services/auth.service";
 
 
 @NgModule({
@@ -48,7 +49,10 @@ import {AppRoutingModule} from "./app.routing.module";
         ReactiveFormsModule,
         AppRoutingModule
     ],
-    providers: [DataServiceService],
+    providers: [
+        DataServiceService,
+        AuthService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
