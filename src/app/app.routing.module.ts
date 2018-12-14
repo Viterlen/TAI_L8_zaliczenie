@@ -1,16 +1,15 @@
 import {RouterModule, Routes} from "@angular/router";
-import {BlogComponent} from "./components/blog/blog.component";
-import {BlogDetailsComponent} from "./components/blog/blog-details/blog-details.component";
 import {NgModule} from "@angular/core";
-import {HomeComponent} from "./components/home/home.component";
 import {QuizComponent} from "./components/quiz/quiz.component";
 import {BlogHomeComponent} from "./components/blog-home/blog-home.component";
 import {ContactComponent} from "./components/contact/contact.component";
+import {HomeComponent} from "./components/home/home.component";
+import {BlogDetailsComponent} from "./components/blog/blog-details/blog-details.component";
 
 const appRoutes: Routes = [
     {
         path: '',
-        component: HomeComponent,
+        component: HomeComponent
     },
     {
         path: 'quiz',
@@ -32,9 +31,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, {
-            enableTracing: true
-        })
+        RouterModule.forRoot(appRoutes)
     ],
     exports: [RouterModule]
 })

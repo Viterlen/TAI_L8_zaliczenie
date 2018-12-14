@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Data} from '@angular/router';
-import {BlogComponent} from '../blog.component';
+import {ActivatedRoute} from '@angular/router';
 import {DataServiceService} from '../../../services/data-service.service';
 
 @Component({

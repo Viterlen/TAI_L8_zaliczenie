@@ -8,7 +8,7 @@ import {DataServiceService} from '../../services/data-service.service';
     styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-
+    @Input() filterText: string;
     public list;
     constructor(private dataServiceService: DataServiceService) {
     this.dataServiceService.getAll().subscribe(results => {
