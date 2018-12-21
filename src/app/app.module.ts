@@ -11,7 +11,7 @@ import {BlogItemComponent} from './components/Blog/blog-item/blog-item.component
 import {BlogItemTextComponent} from './components/Blog/blog-item-text/blog-item-text.component';
 import {BlogItemImageComponent} from './components/Blog/blog-item-image/blog-item-image.component';
 import {SummaryPipe} from './summary.pipe';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FilterPipe} from './pipes/filter.pipe';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -22,6 +22,9 @@ import {DataServiceService} from "./services/data-service.service";
 import {BlogDetailsComponent} from "./components/blog/blog-details/blog-details.component";
 import {AppRoutingModule} from "./app.routing.module";
 import {AuthService} from "../../api/services/auth.service";
+import {AuthInterceptor} from "../../api/services/auth.interceptor";
+import { NewComponentComponent } from './new-component/new-component.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -41,6 +44,8 @@ import {AuthService} from "../../api/services/auth.service";
         SearchBarComponent,
         BlogHomeComponent,
         TextFormatDirective,
+        NewComponentComponent,
+        LoginComponent,
     ],
     imports: [
         BrowserModule,
@@ -51,7 +56,11 @@ import {AuthService} from "../../api/services/auth.service";
     ],
     providers: [
         DataServiceService,
-        AuthService
+        AuthService,
+        {   provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true
+        }
     ],
     bootstrap: [AppComponent]
 })

@@ -55,7 +55,4 @@ createOrUpdate(credentials) {
     getToken() {
         return localStorage.getItem('token');
     }
-
-
-
 }
